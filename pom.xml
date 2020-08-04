@@ -47,6 +47,9 @@
           </plugin>
         </plugins>
       </build>
+      <modules>
+        <module>HelloDocker</module>
+      </modules>
     </profile>
     <profile>
       <id>Kubernetes</id>
@@ -83,6 +86,9 @@
           </plugin>
         </plugins>
       </build>
+      <modules>
+        <module>HelloDocker</module>
+      </modules>
     </profile>
   </profiles>
 </project>
