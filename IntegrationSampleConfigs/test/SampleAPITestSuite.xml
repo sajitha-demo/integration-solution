@@ -11,7 +11,14 @@
         <test-case name="sample_test">
             <input>
                 <request-path>/</request-path>
-                <request-method>GET</request-method>
+                <request-method>POST</request-method>
+                <payload><![CDATA[<UserDetails>
+          <Name>John Steve</Name>
+         <Age>34</Age>
+</UserDetails>]]></payload>
+                <properties>
+                    <property name="Content-Type" scope="transport" value="application/xml"/>
+                </properties>
             </input>
             <assertions>
                 <assertEquals>

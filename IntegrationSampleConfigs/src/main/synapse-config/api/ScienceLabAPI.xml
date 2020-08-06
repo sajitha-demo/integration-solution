@@ -1,19 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <api context="/userdata" name="ScienceLabAPI" xmlns="http://ws.apache.org/ns/synapse">
-    <resource methods="GET">
+    <resource methods="POST">
         <inSequence>
             <log description="Log Message" level="custom">
                 <property name="Message" value="Service Triggered"/>
             </log>
-            <payloadFactory description="Build XML payload" media-type="xml">
-                <format>
-                    <UserDetails xmlns="">
-                        <Name>John Steve</Name>
-                        <Age>34</Age>
-                    </UserDetails>
-                </format>
-                <args/>
-            </payloadFactory>
             <enrich description="Enrich the XML payload">
                 <source clone="true" type="inline">
                     <Job xmlns="">Developer</Job>
