@@ -3,7 +3,7 @@
     <resource methods="GET">
         <inSequence>
             <payloadFactory media-type="json">
-                <format>{"Hello":"WSO2"}</format>
+                <format>{"Hello":"WSO2 CICD"}</format>
                 <args/>
             </payloadFactory>
             <respond/>
