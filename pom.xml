@@ -2,15 +2,15 @@
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>wso2.sampleHelloWorld</groupId>
-  <artifactId>HelloProject</artifactId>
+  <groupId>wso2.sampleXmlToJsonTransformationTemplate</groupId>
+  <artifactId>IntegrationSample</artifactId>
   <version>1.0.0</version>
   <packaging>pom</packaging>
-  <name>HelloProject</name>
-  <description>HelloProject</description>
+  <name>IntegrationSample</name>
+  <description>IntegrationSample</description>
   <modules>
-    <module>HelloProjectConfigs</module>
-    <module>HelloProjectCompositeExporter</module>
+    <module>IntegrationSampleConfigs</module>
+    <module>IntegrationSampleCompositeExporter</module>
   </modules>
   <build />
   <profiles>
@@ -48,7 +48,7 @@
         </plugins>
       </build>
       <modules>
-        <module>HelloDocker</module>
+        <module>IntegrationSampleDockerExporter</module>
       </modules>
     </profile>
     <profile>
@@ -87,7 +87,7 @@
         </plugins>
       </build>
       <modules>
-        <module>HelloDocker</module>
+        <module>IntegrationSampleDockerExporter</module>
       </modules>
     </profile>
   </profiles>
