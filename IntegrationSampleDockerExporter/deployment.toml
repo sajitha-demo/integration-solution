@@ -101,5 +101,5 @@ algorithm = "AES"
 # [mediation]
 # synapse.global_timeout_interval = "120000"  # interval in milliseconds
 
-# [secrets]
-# secret_key = "[secret value]"
+[secrets]
+token = "[secret-token]"

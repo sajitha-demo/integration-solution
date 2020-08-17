@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<api context="/userdata" name="ScienceLabAPI" xmlns="http://ws.apache.org/ns/synapse">
+<api context="/productdata" name="ProductDetailsAPI" xmlns="http://ws.apache.org/ns/synapse">
     <resource methods="POST">
         <inSequence>
             <log description="Log Message" level="custom">
@@ -7,22 +7,26 @@
             </log>
             <enrich description="Enrich the XML payload">
                 <source clone="true" type="inline">
-                    <Job xmlns="">Developer</Job>
+                    <Company xmlns="">WSO2</Company>
                 </source>
                 <target action="child" type="body"/>
             </enrich>
             <payloadFactory description="Build JSON payload from XML body" media-type="json">
                 <format> {
     "status" : "successful",
-    "name" : "$1",
-    "age" : $2,
-    "job_category" : "$3"
+    "product_name" : "$1",
+    "version" : "$2",
+    "company" : "$3"
+    "security_token" : "$4",
+    "current_environment": "$5"
 }
                 </format>
                 <args>
-                    <arg evaluator="xml" expression="//UserDetails/Name"/>
-                    <arg evaluator="xml" expression="//UserDetails/Age"/>
-                    <arg evaluator="xml" expression="//UserDetails/Job"/>
+                    <arg evaluator="xml" expression="//ProductDetails/Product"/>
+                    <arg evaluator="xml" expression="//ProductDetails/Version"/>
+                    <arg evaluator="xml" expression="//ProductDetails/Company"/>
+                    <arg evaluator="xml" expression="wso2:vault-lookup('token')"/>
+                    <arg evaluator="xml" expression="get-property('env', 'environment')"/>
                 </args>
             </payloadFactory>
             <respond description="Respond"/>
