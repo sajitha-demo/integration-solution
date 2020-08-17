@@ -17,7 +17,7 @@
 	<Version>1.2.0</Version>
 </ProductDetails>]]></payload>
                 <properties>
-                    <property name="Content-Type" scope="transport" value="application-xml"/>
+                    <property name="Content-Type" scope="transport" value="application/xml"/>
                 </properties>
             </input>
             <assertions>
