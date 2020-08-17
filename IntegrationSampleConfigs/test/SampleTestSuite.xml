@@ -1,0 +1,40 @@
+<unit-test>
+    <artifacts>
+        <test-artifact>
+            <artifact>/IntegrationSampleConfigs/src/main/synapse-config/api/ProductDetailsAPI.xml</artifact>
+        </test-artifact>
+        <supportive-artifacts/>
+        <registry-resources/>
+        <connector-resources/>
+    </artifacts>
+    <test-cases>
+        <test-case name="TestCaseOne">
+            <input>
+                <request-path>/</request-path>
+                <request-method>GET</request-method>
+                <payload><![CDATA[<ProductDetails>
+	<Product>wso2mi</Product>
+	<Version>1.2.0</Version>
+</ProductDetails>]]></payload>
+                <properties>
+                    <property name="Content-Type" scope="transport" value="application-xml"/>
+                </properties>
+            </input>
+            <assertions>
+                <assertEquals>
+                    <actual>$body</actual>
+                    <expected><![CDATA[{
+    "status" : "successful",
+    "product_name" : "wso2mi",
+    "version" : "1.2.0",
+    "company" : "WSO2"
+    "security_token" : "secret-token",
+    "current_environment": "dev-env"
+}]]></expected>
+                    <message>Actual body does not match with expected</message>
+                </assertEquals>
+            </assertions>
+        </test-case>
+    </test-cases>
+    <mock-services/>
+</unit-test>

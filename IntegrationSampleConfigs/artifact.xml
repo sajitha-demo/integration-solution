@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><artifacts>
-    <artifact name="ScienceLabAPI" groupId="wso2.sampleXmlToJsonTransformationTemplate.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
-        <file>src/main/synapse-config/api/ScienceLabAPI.xml</file>
+    <artifact name="ProductDetailsAPI" groupId="wso2.sampleXmlToJsonTransformationTemplate.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/ProductDetailsAPI.xml</file>
     </artifact>
 </artifacts>
