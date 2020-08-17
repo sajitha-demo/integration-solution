@@ -11,7 +11,7 @@
         <test-case name="TestCaseOne">
             <input>
                 <request-path>/</request-path>
-                <request-method>GET</request-method>
+                <request-method>POST</request-method>
                 <payload><![CDATA[<ProductDetails>
 	<Product>wso2mi</Product>
 	<Version>1.2.0</Version>
