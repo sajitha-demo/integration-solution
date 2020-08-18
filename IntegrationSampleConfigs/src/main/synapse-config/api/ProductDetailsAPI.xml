@@ -18,7 +18,8 @@
     "version" : "$2",
     "company" : "$3"
     "security_token" : "$4",
-    "current_environment": "$5"
+    "current_environment": "$5”,
+    "updated" : "yes"
 }
                 </format>
                 <args>
